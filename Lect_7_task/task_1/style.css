@@ -1,0 +1,20 @@
+.parent {
+    min-height: 20px;
+    background: #FF6600;
+    width:440px;
+  }
+  .rows,.rows-2,.rows-3 {
+    width: 100px;
+    height: 100px;
+    background: #00F1FF;
+    margin: 5px; 
+  }
+  .rows{
+  float:left;
+  }
+  .rows-2{
+    float:left;
+  }
+  .rows-3{
+    float:left;
+  }

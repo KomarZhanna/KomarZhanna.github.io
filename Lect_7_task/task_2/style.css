@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+  }
+  .fullwrap{
+    padding: 10px;
+    height: 470px;
+    width: 433px;
+    border:1px solid #000;
+  }
+  .header{
+    height: 60px;
+    border:1px solid #000;
+  }
+  .wrap{
+    height: 280px;
+    border:1px solid #000;
+    margin: 10px 0;
+    padding: 10px 5px;
+  }
+  .main{
+    width: 230px;
+    border:1px solid #000;
+    height: 100%;
+    float: left;
+  }
+  .sidebar{
+    width: 147px;
+    height: 100%;
+    border:1px solid #000;
+    float: right;
+    margin-left: 20px;
+  }
+  .footer{
+    border:1px solid #000;
+    height: 90px;
+  }
