@@ -1,0 +1,29 @@
+a {
+  background-image: url(sprite.png);
+  background-repeat: no-repeat;
+  height: 98px;
+  width: 100px;
+  display: inline-block;
+  margin-right: 10px;
+}
+a.facebook {
+  background-position: left top;
+}
+a.twitter {
+  background-position: -100px top;
+}
+a.youtube {
+  background-position: -200px top;
+}
+a.instagram {
+  background-position: -300px top;
+}
+a.linkedin {
+  background-position: -400px top;
+}
+a.tumblr {
+  background-position: -500px top;
+}
+a.google {
+  background-position: -600px top;
+}
