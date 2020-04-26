@@ -1,0 +1,73 @@
+body{
+    margin:0;
+    padding: 0;
+    background: #4d6278;
+}
+.container{
+    width:600px;
+    height: 160px;
+    margin: 27px 37px;
+    border-radius: 4px;
+    background: #fff;
+}
+.hosting, .cloud-host, .server{
+    width:185px;
+    height: 140px;
+    border-right: 1px solid #d9d9d9;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom:15px;
+}
+.hosting{
+    margin:25px 15px;
+}
+
+.img{
+    background:url(images/sprite.png) no-repeat;
+    display: block;
+    margin-bottom: 15px;
+}
+a.host{
+    width: 50px; height: 40px;
+    background-position: -70px -10px;
+    margin-left: 60px;
+}
+span{
+    color:#f56332;
+    font-size: 16px;
+    font-weight: bold;
+}
+.price, .button{
+    margin-top:15px;
+    font-size:12px;
+    text-align: center;
+}
+.button{
+    background: #f56332;
+    border-radius: 3px;
+    width:72px;
+    height: 24px;
+    margin-left: 50px;
+}
+.button a{
+    color:white;
+    text-decoration: none;
+}
+
+a.cloud{
+    width: 56px; 
+    height: 42px;
+    background-position: -140px -10px;
+    margin-left: 60px;
+}
+.server{
+    border:none;
+}
+
+.serv{
+    width:40px;
+    height: 36px;
+    background-position: -10px -10px;
+    margin-left: 65px;
+}

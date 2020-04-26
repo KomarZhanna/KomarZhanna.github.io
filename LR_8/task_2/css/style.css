@@ -1,0 +1,278 @@
+/* General */
+body{
+    background-image: url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  background-color: #373737;
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  @font-face {
+    font-family: 'Metal Mania';
+    src: local('Metal Mania'), local('MetalMania-Regular'), url(https://fonts.gstatic.com/s/metalmania/v9/RWmMoKWb4e8kqMfBUdPFJdXLiaQoDmlrMlY.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  .container{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+/* Header */
+
+.topmenu{
+  overflow: hidden;
+    position: fixed;
+    top:0;
+    padding-left: 215px;
+    width:100%;
+    height:50px;
+    background-color: black;
+    opacity:0.8;
+    z-index: 9999;
+}
+.menu li{
+    display: inline-block;
+    width:auto;
+    height: inherit;
+    text-align: center;
+    padding:12px 0;
+}
+.menu a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:white;
+    font-family:'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size:20px;
+    padding:15px;
+}
+.menu a:hover{
+    background: #b81a34;
+}
+h1{
+    font-family: 'Metal Mania';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    z-index: 2;
+    color:white;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 90px;
+}
+
+header{
+  height: 433px;
+  background-image: url('../img/bg-01.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.button_like{
+  margin-left: 570px;
+  width:auto;
+  height: auto;
+  padding:20px 40px;
+    font-size: 20px;
+}
+.button_like, .button, button{
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right bottom, #de0103, #ea0326, #f31340, #fa2457, #ff356e);
+  text-decoration: none;
+  font-family:'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+}
+.button_like:hover, .button:hover, button:hover{
+  background-image: linear-gradient(to left top, #de0103, #ea0326, #f31340, #fa2457, #ff356e);
+}
+/* Tour */
+#tour{
+  height: 285px;
+  width:900px;
+  text-align: center;
+  margin:35px 200px;
+  position:relative;
+}
+h2, h3{
+  color:#d9d9d9;
+  font-family:'Open Sans';
+    font-style: normal;
+    text-align: center;
+}
+h2{
+  font-weight: 200;
+  font-size:30px;
+}
+
+.tour-card{ 
+  margin-top: 40px; 
+  vertical-align: top; 
+  width:200px; 
+  height: 220px; 
+  margin-left: 20px; 
+  display: inline-block; 
+  position: relative;
+filter:brightness(100%);
+  
+} 
+
+.madrid{
+  background-image: filter(url('../img/tour/madrid.jpg'),brightness(30%));
+}
+
+.turin{
+  background: filter(url('../img/tour/turin.jpg'),brightness(30%));
+
+}
+.hamburg{
+  background:filter(url('../img/tour/hamburg.jpg'),brightness(30%)); 
+}
+.krakow{
+  background-image: filter(url('../img/tour/krakow.jpg'), brightness(50%)) 
+}
+
+.tour-town{
+  text-transform: uppercase;
+  padding-top: 35px;
+  float:left;
+  padding-left: 10px;
+}
+.tour-place, .tour-place p, .tour-date{
+color:#eee;
+font-size: 15px;
+font-weight: 100;
+float:left;
+padding-top: 10px;
+padding-left: 10px;
+}
+.tour-date{
+  font-style: italic;
+}
+.button{
+  width:145px;
+  height: 30px;
+  float:left;
+  padding-top:12px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left:30px;
+  margin-top: 20px;
+}
+/* Gallery */
+#gallery{
+  width:900px;
+  height: 640px;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.photo{
+width:243px;
+  height: 243px;
+  display: inline-block;
+  margin: 20px;
+}
+#gallery h2{
+  padding-bottom: 35px;
+}
+/* Subscribe */
+#subscribe{
+  margin-top:100px;
+  width:100%;
+  height: 290px;
+  background-image: url('../img/bg-02.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  display: block;
+  position: relative;
+}
+#subscribe::after{
+  content: "";
+  background-image: url('../img/black.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.pitch h2{
+  padding-top: 75px;
+  text-transform: uppercase;
+}
+.pitch p{
+  color:#eeeeee;
+  text-align: center;
+  font-weight: 100;
+  font-family:'Open Sans';
+  font-style: normal;
+  padding-top: 40px;
+}
+form{
+  text-align: center;
+}
+input{
+  font-size: 15px;
+  font-weight: 100;
+  font-family:'Open Sans';
+  font-style: normal;
+  width: 210px;
+  height: 40px;
+}
+button{
+  width:130px;
+  height: 47px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* Footer */
+footer{
+  display: block;
+  background-image: url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  background-color: #1f1f1f;
+  width:100%;
+  height: 100px;
+  text-align: center;
+  color:white;
+}
+.social{
+  padding-top:30px;
+}
+.social a{
+color:white;
+padding:10px;
+}
+.social a:hover{
+  color: #b81a34;
+}
+footer p{
+  padding-top: 20px;
+  font-weight: 100;
+  font-family:'Open Sans';
+  font-style: normal;
+}
