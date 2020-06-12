@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3 Transitions and Animations — Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.18415" />
+</head>
+
+<body>
+    <h2>Concert Map</h2>
+
+    <div id="concert-map" class="concert-map">
+        <div class="pin madrid">
+            <span class="town">Madrid</span>
+            <div class="popover">
+                <p class="place">Wizink Center</p>
+                <p class="date">October 7, 2017</p>
+                <a class="button" href="#feedbackFormModal">Buy tickets</a>
+            </div>
+        </div>
+
+        <div class="pin turin">
+            <span class="town">Turin</span>
+            <div class="popover">
+                <p class="place">Pala Alpitour</p>
+                <p class="date">October 14, 2017</p>
+                <a class="button" href="#feedbackFormModal">Buy tickets</a>
+            </div>
+        </div>
+        <div class="pin hamburg">
+            <span class="town">Hamburg</span>
+            <div class="popover">
+                <p class="place">Barclaycard Arena</p>
+                <p class="date">November 6, 2017</p>
+                <a class="button" href="#feedbackFormModal">Buy tickets</a>
+            </div>
+        </div>
+        <div class="pin krakow">
+            <span class="town">Kraków</span>
+            <div class="popover">
+                <p class="place">Tauron Arena</p>
+                <p class="date">November 12, 2017</p>
+                <a class="button" href="#feedbackFormModal">Buy tickets</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="feedbackFormModal">
+    
+    <form class="jotform-form" method="post" accept-charset="utf-8" autocomplete="on">
+
+        <div role="dialog" class="form-all">
+            <ul class="form-section page-section">
+                <li id="cid_14" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group header-default">
+                        <div class="header-text httal htvam">
+                            <h2 id="header_14" class="form-header" data-component="header">
+                                You need to Buy Tickets?
+                            </h2>
+                            <div id="subHeader_14" class="form-subHeader">
+                                Fill the details below accurately and we will contact you soon
+                                .
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line jf-required" data-type="control_fullname" id="id_1">
+                    <label class="form-label form-label-left form-label-auto" id="label_1" for="first_1">
+                        Full Name <span class="form-required"> * </span>
+                    </label>
+                    <div id="cid_1" class="form-input jf-required">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align: top;" data-input-type="first">
+                                <input type="text" id="first_1" name="q1_fullName1[first]"
+                                    class="form-textbox validate[required]" size="10" value="" data-component="first"
+                                    aria-labelledby="label_1 sublabel_1_first" required="" />
+                                <label class="form-sub-label" for="first_1" id="sublabel_1_first"
+                                    style="min-height: 13px;" aria-hidden="false">
+                                    First Name
+                                </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align: top;" data-input-type="last">
+                                <input type="text" id="last_1" name="q1_fullName1[last]"
+                                    class="form-textbox validate[required]" size="15" value="" data-component="last"
+                                    aria-labelledby="label_1 sublabel_1_last" required="" />
+                                <label class="form-sub-label" for="last_1" id="sublabel_1_last"
+                                    style="min-height: 13px;" aria-hidden="false">
+                                    Last Name
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line jf-required" data-type="control_email" id="id_3">
+                    <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3">
+                        E-mail <span class="form-required"> * </span>
+                    </label>
+                    <div id="cid_3" class="form-input jf-required">
+                        <input type="email" id="input_3" name="q3_email3" class="form-textbox validate[required, Email]"
+                            size="30" value="" placeholder=" " data-component="email" aria-labelledby="label_3"
+                            required="" />
+                    </div>
+                </li>
+                <li class="form-line jf-required" data-type="control_phone" id="id_5">
+                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5_area">
+                        Phone Number <span class="form-required"> * </span>
+                    </label>
+                    <div id="cid_5" class="form-input jf-required">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align: top;"
+                                data-input-type="areaCode">
+                                <input type="tel" id="input_5_area" name="q5_phoneNumber5[area]"
+                                    class="form-textbox validate[required]" size="6" value="" data-component="areaCode"
+                                    aria-labelledby="label_5 sublabel_5_area" required="" />
+                                <span class="phone-separate" aria-hidden="true"> - </span>
+                                <label class="form-sub-label" for="input_5_area" id="sublabel_5_area"
+                                    style="min-height: 13px;" aria-hidden="false">
+                                    Area Code
+                                </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align: top;" data-input-type="phone">
+                                <input type="tel" id="input_5_phone" name="q5_phoneNumber5[phone]"
+                                    class="form-textbox validate[required]" size="12" value="" data-component="phone"
+                                    aria-labelledby="label_5 sublabel_5_phone" required="" />
+                                <label class="form-sub-label" for="input_5_phone" id="sublabel_5_phone"
+                                    style="min-height: 13px;" aria-hidden="false">
+                                    Phone Number
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line jf-required" data-type="control_checkbox" id="id_11">
+                    <label class="form-label form-label-left form-label-auto" id="label_11" for="input_11">
+                        Terms <span class="form-required"> * </span>
+                    </label>
+                    <div id="cid_11" class="form-input jf-required">
+                        <div class="form-single-column" role="group" aria-labelledby="label_11"
+                            data-component="checkbox">
+                            <span class="form-checkbox-item" style="clear: left;">
+                                <input type="checkbox" class="form-checkbox validate[required]" id="input_11_0"
+                                    name="q11_terms[]" value="I accept the terms and conditions" required="" />
+                                <label id="label_input_11_0" for="input_11_0">
+                                    I accept the terms and conditions
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_payment" id="id_15" data-payment="true">
+                    <label class="form-label form-label-left form-label-auto" id="label_15" for="input_15">
+                        Choose Quantity
+                    </label>
+                    <div id="cid_15" class="form-input">
+                        <div data-wrapper-react="true">
+                            <div class="filter-container"></div>
+                            <input type="hidden" name="simple_fpc" data-payment_type="payment" data-component="payment1"
+                                value="15" />
+                            <input type="hidden" name="payment_total_checksum" id="payment_total_checksum"
+                                data-component="payment2" />
+                            
+                            <div data-wrapper-react="true">
+                                <span class="form-product-item" categories="non-categorized" pid="1001"
+                                    style="display: block;">
+                                    <div data-wrapper-react="true" class="form-product-item-detail">
+                                        <input type="checkbox" class="form-checkbox form-product-input"
+                                            id="input_15_1001" name="q15_chooseQuantity[][id]" value="1001" />
+                                        <label for="input_15_1001" class="form-product-container">
+                                            <span data-wrapper-react="true">
+                                                <span class="form-product-name" id="product-name-input_15_1001">
+                                                    Concert Ticket
+                                                </span>
+                                                <span class="form-product-details">
+                                                    <b>
+                                                        <span data-wrapper-react="true">
+                                                            $ <span id="input_15_1001_price"> 50.00 </span>
+                                                        </span>
+                                                    </b>
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <br />
+                                        <br />
+                                        <span class="form-sub-label-container" style="vertical-align: top;">
+                                            <label class="form-sub-label" for="input_15_quantity_1001_0"
+                                                style="min-height: 13px;" aria-hidden="false">
+                                                Quantity
+                                            </label>
+                                            <select class="form-dropdown"
+                                                name="q15_chooseQuantity[special_1001][item_0]"
+                                                id="input_15_quantity_1001_0">
+                                                <option value="1"> 1 </option>
+                                                <option value="2"> 2 </option>
+                                                <option value="3"> 3 </option>
+                                                <option value="4"> 4 </option>
+                                                <option value="5"> 5 </option>
+                                                <option value="6"> 6 </option>
+                                                <option value="7"> 7 </option>
+                                                <option value="8"> 8 </option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </span>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_radio" id="id_19">
+                    <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19">
+                        City
+                    </label>
+                    <div id="cid_19" class="form-input">
+                        <div class="form-single-column" role="group"  data-component="radio">
+                            <span class="form-radio-item" style="clear: left;">
+                                <span class="dragger-item"> </span>
+                                <input type="radio" class="form-radio" value="Hamburg" />
+                                <label id="label_input_19_0" for="input_19_0">
+                                    Hamburg
+                                </label>
+                            </span>
+                            <span class="form-radio-item" style="clear: left;">
+                                <span class="dragger-item"> </span>
+                                <input type="radio" class="form-radio" value="Krakow" />
+                                <label id="label_input_19_1" for="input_19_1"> Krakow </label>
+                            </span>
+                            <span class="form-radio-item" style="clear: left;">
+                                <span class="dragger-item"> </span>
+                                <input type="radio" class="form-radio" value="Turin" />
+                                <label id="label_input_19_2" for="input_19_2"> Turin </label>
+                            </span>
+                            <span class="form-radio-item" style="clear: left;">
+                                <span class="dragger-item"> </span>
+                                <input type="radio" class="form-radio"  value="Madrid" />
+                                <label id="label_input_19_3" for="input_19_3"> Madrid </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_button" id="id_13">
+                    <div id="cid_13" class="form-input-wide">
+                        <div style="margin-left: 156px;" data-align="auto"
+                            class="form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField">
+                            <button id="input_13" type="submit"
+                                class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
+                                data-component="button" data-content="">
+                                Purchase
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li style="display: none;">
+                    Should be Empty: <input type="text" name="website" value="" />
+                </li>
+            </ul>
+        </div>
+    </form>
+    </section>
+</body>
+
+</html>
