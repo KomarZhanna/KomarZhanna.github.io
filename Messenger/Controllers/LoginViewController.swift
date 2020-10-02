@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -90,7 +91,7 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = UIColor(patternImage:UIImage(named: "bg1")!)
         
-        loginButton.addTarget(self, action: #selector(didTapRegister), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         
         registerButton.addTarget(self, action: #selector(didTapRegister), for: .touchUpInside)
         
@@ -125,7 +126,7 @@ class LoginViewController: UIViewController {
         
         loginButton.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: passwordField.bottom + 50, width: frameWidth, height: 52)
         
-        label.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: loginButton.bottom + 150, width: frameWidth, height: 52)
+        label.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: loginButton.bottom + 75, width: frameWidth, height: 52)
         
         registerButton.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: label.bottom + 5, width: frameWidth, height: 52)
         
@@ -142,6 +143,19 @@ class LoginViewController: UIViewController {
             alertUserLoginError()
             return
         }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {[weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard let result = authResult, error == nil else {
+                print("Error login user!")
+                return
+            }
+            let user = result.user
+            print("Login User \(user)")
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+        })
     }
     
     func alertUserLoginError() {

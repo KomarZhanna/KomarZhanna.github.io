@@ -6,18 +6,16 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegistrationViewController: UIViewController, UINavigationControllerDelegate {
 
     private let imageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.contentMode = .scaleToFill
         imageView.tintColor = UIColor(red: 0.43, green: 0.44, blue: 0.57, alpha: 1.00)
-        imageView.layer.cornerRadius = 100
-        imageView.layer.borderWidth = 5
         imageView.layer.masksToBounds = true
-        imageView.layer.borderColor = UIColor(red: 0.43, green: 0.44, blue: 0.57, alpha: 1.00).cgColor
         return imageView
     }()
     
@@ -163,7 +161,7 @@ class RegistrationViewController: UIViewController, UINavigationControllerDelega
         
         registerButton.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: passwordField.bottom + 50, width: frameWidth, height: 52)
         
-        label.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: registerButton.bottom + 100, width: frameWidth, height: 52)
+        label.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: registerButton.bottom + 50, width: frameWidth, height: 52)
         
         loginButton.frame = CGRect(x: (view.bounds.width / 2) - (frameWidth / 2),y: label.bottom + 5, width: frameWidth, height: 52)
         
@@ -182,10 +180,36 @@ class RegistrationViewController: UIViewController, UINavigationControllerDelega
             alertUserLoginError()
             return
         }
+        
+        DatabaseManager.shared.userExists(with: email, completion: {[weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+            guard !exists else {
+                // user already exists
+                self?.alertUserLoginError(message: "Looks like user with the same email is already exists")
+                return
+            }
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult, error in
+                
+                guard let _ = authResult, error == nil else {
+                    print("Error creating user!")
+                    return
+                }
+                
+                DatabaseManager.shared.insertUser(with: DatabaseManager.ChatAppUser(name: name, emailAddress: email))
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+            
+            
+        })
+        
+        
     }
     
-    func alertUserLoginError() {
-        let alert = UIAlertController(title: "Woops...", message: "Please enter all information to sign up ", preferredStyle: .alert)
+    func alertUserLoginError(message:String = "Please enter all information to sign up ") {
+        let alert = UIAlertController(title: "Woops...", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
